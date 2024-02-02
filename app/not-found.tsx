@@ -1,5 +1,5 @@
 import Card from "@/components/home/card";
-import { LINKEDIN, MOTTO, SIGNUP } from "@/lib/constants";
+import { LINKEDIN_LINK, MOTTO, SIGNUP } from "@/lib/constants";
 import { Github, Twitter } from "@/components/shared/icons";
 import WebVitals from "@/components/home/web-vitals";
 import ComponentGrid from "@/components/home/component-grid";
@@ -30,7 +30,7 @@ export default async function Home() {
           className="animate-fade-up bg-gradient-to-br from-blue-950 to-blue-700 bg-clip-text text-center font-display text-4xl font-bold tracking-[-0.02em] text-transparent opacity-0 drop-shadow-sm [text-wrap:balance] md:text-7xl md:leading-[5rem]"
           style={{ animationDelay: "0.15s", animationFillMode: "forwards" }}
         >
-          This page isn't on the website yet.
+          This page isn&apos;t on the website yet.
         </h1>
       </div>
     </>
@@ -55,7 +55,7 @@ const features = [
     description:
       "Jumpstart your next project by deploying Precedent to [Vercel](https://vercel.com/) in one click.",
     demo: (
-      <a href={LINKEDIN}>
+      <a href={LINKEDIN_LINK}>
         <Image
           src="https://vercel.com/button"
           alt="Deploy with Vercel"
