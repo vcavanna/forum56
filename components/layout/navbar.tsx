@@ -21,18 +21,25 @@ export default function NavBar({ session }: { session: Session | null }) {
             : "bg-white/0"
         } z-30 transition-all`}
       >
-        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-between w-full">
+        <div className="mx-5 flex h-16 max-w-screen-xl items-center justify-start w-full space-x-20">
           <Link href="/" className="flex items-center font-display text-2xl">
             <Image
               src="/logo.png"
-              alt="Precedent logo"
-              width="30"
-              height="30"
+              alt="Forum 56 Logo"
+              width="250"
+              height="68"
               className="mr-2 rounded-sm"
             ></Image>
-            <p>Precedent</p>
           </Link>
-          <div>
+          <Link href="/our-story"
+            className="text-blue-950 font-display text-xl">
+            Our Story
+          </Link>
+          <Link href="/our-team"
+            className="text-blue-950 font-display text-xl">
+            Our Team
+          </Link>
+          {/* <div>
             {session ? (
               <UserDropdown session={session} />
             ) : (
@@ -43,7 +50,7 @@ export default function NavBar({ session }: { session: Session | null }) {
                 Sign In
               </button>
             )}
-          </div>
+          </div> */}
         </div>
       </div>
     </>
