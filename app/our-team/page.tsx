@@ -32,27 +32,23 @@ export default async function Home() {
         >
           Our Team
         </h1>
-        <p
-          className="mt-6 animate-fade-up text-center text-gray-500 opacity-0 [text-wrap:balance] md:text-xl"
-          style={{ animationDelay: "0.25s", animationFillMode: "forwards" }}
-        >
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis nesciunt fugiat officiis ducimus enim. Explicabo ipsa adipisci quasi fugit quisquam, expedita assumenda animi vitae, numquam perferendis tempore eius accusantium eos!
-        </p>
       </div>
       <div className="my-10 grid w-full max-w-screen-xl animate-fade-up grid-cols-1 gap-5 px-5 md:grid-cols-3 xl:px-0">
-        {features.map(({ title, description, demo, }) => (
-          <Card
-            key={title}
-            title={title}
-            description={description}
-            demo={
-              title === "Beautiful, reusable components" ? (
-                <ComponentGrid />
-              ) : (
-                demo
-              )
-            }
-          />
+        {features.map(({ title, description, filePath, link, imgAlt }) => (
+          <a href={link} key={title} target="_blank" rel="noreferrer">
+            <Card
+              title={title}
+              description={description}
+              demo={<Image className="object-cover object-center rounded-full"
+                  src={require(`${filePath}`)}
+                  alt={imgAlt}
+                  width={170}
+                  height={170}
+                  unoptimized
+                />
+              }
+            />
+          </a>
         ))}
       </div>
     </>
@@ -63,49 +59,49 @@ const features = [
   {
     title: "Joe Dunikowski",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rem quisquam architecto libero est, eligendi voluptas, vitae ...",
-    demo: (
-      <a href={LINKEDIN_LINK}>
-        <Image className="object-cover object-center rounded-full"
-          src={require("./jDunikowski.jpeg")}
-          alt="Joe Dunikowski Profile Pic"
-          width={170}
-          height={170}
-          unoptimized
-        />
-      </a>
-    ),
+      "Co-founder & Executive Director",
+    link: "https://www.linkedin.com/in/joseph-dunikoski/",
+    filePath: "./jDunikowski.jpeg",
+    imgAlt: "Joe Dunikowski Profile Pic",
   },
   {
     title: "JP Rezendes",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rem quisquam architecto libero est, eligendi voluptas, vitae ...",
-    demo: (
-      <a href={LINKEDIN_LINK}>
-        <Image className="object-cover object-center rounded-full"
-          src={require("./jpRezendes.jpeg")}
-          alt="JP Rezendes Profile Pic"
-          width={170}
-          height={170}
-          unoptimized
-        />
-      </a>
-    ),
+      "Co-founder & Director of Operations",
+    link: "https://www.linkedin.com/in/jprezendes/",
+    filePath: "./jpRezendes.jpeg",
+    imgAlt: "JP Rezendes Profile Pic",
+  },
+  {
+    title: "Joseph Moynihan",
+    description:
+      "Co-founder & Director of Strategy",
+    link: "https://www.linkedin.com/in/joseph-moynihan-0586051b9/",
+    filePath: "./jMoynihan.jpeg",
+    imgAlt: "Joseph Moynihan Profile Pic",
+  },
+  {
+    title: "Molly Zepeda",
+    description:
+      "Co-founder",
+    link: "https://www.linkedin.com/in/mollyzepeda1/",
+    filePath: "./mZepeda.jpg",
+    imgAlt: "Molly Zepeda Profile Pic",
+  },
+  {
+    title: "Luke Posegate",
+    description:
+      "Co-founder",
+    link: "https://www.linkedin.com/in/luke-posegate/",
+    filePath: "./lPosegate.jpeg",
+    imgAlt: "Luke Posegate Profile Pic"
   },
   {
     title: "Vincent Cavanna",
     description:
-      "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nam rem quisquam architecto libero est, eligendi voluptas, vitae ...",
-    demo: (
-      <a href={LINKEDIN_LINK}>
-        <Image className="object-cover object-center rounded-full"
-          src={require("./vincentC.jpg")}
-          alt="Vincent Cavanna Profile Pic"
-          width={170}
-          height={170}
-          unoptimized
-        />
-      </a>
-    ),
+      "Website and Design",
+    link: "https://www.linkedin.com/in/vincent-cavanna/",
+    filePath: "./vincentC.jpg",
+    imgAlt: "Vincent Cavanna Profile Pic",
   }
 ];
