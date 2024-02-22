@@ -39,6 +39,10 @@ export default function NavBar({ session }: { session: Session | null }) {
             className="text-blue-950 font-display text-xl">
             Our Team
           </Link>
+          <Link href="/events"
+            className="text-blue-950 font-display text-xl">
+            Events
+          </Link>
           {/* <div>
             {session ? (
               <UserDropdown session={session} />
