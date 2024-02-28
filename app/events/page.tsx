@@ -70,9 +70,9 @@ const events = [
   // },
   {
     name: "Brief Labs Email Writing Workshop",
-    location: "TBD",
+    location: "University of Dallas and the Gingerman",
     date: "Monday March 4th, 2024",
-    time: "TBD",
+    time: "6 pm at UD, 7 pm Happy Hour",
     filePath: "./CoverImage.png"
   },
   {

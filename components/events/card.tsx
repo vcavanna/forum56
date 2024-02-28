@@ -18,7 +18,7 @@ export default function Card({
 }) {
   return (
     <div
-      className={`scroll mt-2 snap-center relative col-span-1 h-96 overflow-hidden rounded-xl border border-gray-200 shadow-md bg-white ${
+      className={`scroll mt-2 snap-center relative col-span-1 h-[128] overflow-hidden rounded-xl border border-gray-200 shadow-md bg-white ${
         large ? "md:col-span-2" : ""
       }`}
     >
@@ -27,8 +27,11 @@ export default function Card({
         <h2 className="bg-gradient-to-br from-black to-stone-500 bg-clip-text font-display text-xl font-bold text-transparent [text-wrap:balance] md:text-3xl md:font-normal">
           {title}
         </h2>
-        <div className="mt-5 leading-normal text-center text-gray-500 [text-wrap:balance] md:text-xl">
+        <div className="mt-2 leading-normal text-center text-gray-500 [text-wrap:balance] md:text-xl">
           {location} - {date}
+        </div>
+        <div className="mt-2 mb-5 leading-normal text-center text-gray-400 [text-wrap:balance] md:text-xl">
+          Time: {time}
         </div>
       </div>
     </div>
