@@ -36,12 +36,12 @@ export default async function Home() {
 
 const features = [
   {
-    title: "Joe Dunikowski",
+    title: "Joe Dunikoski",
     description:
       "Co-founder & Executive Director",
     link: "https://www.linkedin.com/in/joseph-dunikoski/",
     filePath: "./jDunikowski.jpeg",
-    imgAlt: "Joe Dunikowski Profile Pic",
+    imgAlt: "Joe Dunikoski Profile Pic",
   },
   {
     title: "JP Rezendes",
