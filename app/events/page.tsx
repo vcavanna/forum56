@@ -48,10 +48,10 @@ const events = [
   //   filePath: "./happyHour.jpg"
   // },
   {
-    name: "Brief Labs Email Writing Workshop",
-    location: "University of Dallas and the Gingerman",
+    name: "The BRIEF Lab Communications Workshop: Emails",
+    location: "University of Dallas x The Gingerman Las Colinas",
     date: "Monday March 4th, 2024",
-    time: "6 pm at UD, 7 pm Happy Hour",
+    time: "6 pm @ UD Serafy Room, 7 pm @ Gingerman",
     filePath: "./CoverImage.png"
   },
   {
