@@ -70,7 +70,7 @@ const features = [
   {
     title: "Luke Posegate",
     description:
-      "Co-founder",
+      "Co-founder & Director of Communications",
     link: "https://www.linkedin.com/in/luke-posegate/",
     filePath: "./lPosegate.jpeg",
     imgAlt: "Luke Posegate Profile Pic"
