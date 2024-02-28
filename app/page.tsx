@@ -1,28 +1,7 @@
-import Card from "@/components/home/card";
 import { LINKEDIN_LINK, MOTTO, SIGNUP } from "@/lib/constants";
-import { Github, Linkedin } from "@/components/shared/icons";
-import WebVitals from "@/components/home/web-vitals";
-import ComponentGrid from "@/components/home/component-grid";
-import Image from "next/image";
-import { nFormatter } from "@/lib/utils";
+import { Linkedin } from "@/components/shared/icons";
 
 export default async function Home() {
-  const { stargazers_count: stars } = await fetch(
-    "https://api.github.com/repos/steven-tey/precedent",
-    {
-      ...(process.env.GITHUB_OAUTH_TOKEN && {
-        headers: {
-          Authorization: `Bearer ${process.env.GITHUB_OAUTH_TOKEN}`,
-          "Content-Type": "application/json",
-        },
-      }),
-      // data will revalidate every 24 hours
-      next: { revalidate: 86400 },
-    },
-  )
-    .then((res) => res.json())
-    .catch((e) => console.log(e));
-
   return (
     <>
       <div className="z-10 w-full max-w-xl px-5 xl:px-0 space-y-24">
